@@ -19,6 +19,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
 # GET and POST for MenuItems
 class MenuItemsView(generics.ListCreateAPIView):
+    # Disable for testing purposes
     permission_classes = [IsAuthenticated]
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer
